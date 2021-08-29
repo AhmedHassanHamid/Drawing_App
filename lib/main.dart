@@ -10,6 +10,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,6 +33,8 @@ class DrawingArea{
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key key}) : super(key: key);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -64,6 +68,7 @@ class _MyAppState extends State<MyHomePage> {
             ),
           ),
           actions: <Widget>[
+            // ignore: deprecated_member_use
             FlatButton(
                 onPressed: () {
                   Navigator.of(context).pop();
